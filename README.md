@@ -37,8 +37,8 @@
 | Area           | Technology |
 |----------------|------------|
 | Frontend       | React.js, Vite, Axios, HTML5 Audio |
-| Backend        | FastAPI, Uvicorn, CORS |
-| AI/NLP         | Google Gemini (`google.generativeai`), LangChain |
+| Backend        | FastAPI, Uvicorn |
+| AI         | Google Gemini (`google.generativeai`), LangChain |
 | Speech Synthesis | `edge-tts` (Microsoft Edge TTS) |
 | Transcription  | `youtube-transcript-api` |
 | Audio Streaming| FastAPI `StreamingResponse`, `io.BytesIO` |
