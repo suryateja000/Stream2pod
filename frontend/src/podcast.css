@@ -1,4 +1,3 @@
-/* --- src/podcast.css --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
@@ -227,7 +226,6 @@ body {
   cursor: not-allowed; 
 }
 
-/* --- Mobile Responsive Styles --- */
 @media (max-width: 900px) {
     .content-grid.loaded, .content-grid.asking {
         grid-template-columns: 1fr;
