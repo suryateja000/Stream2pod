@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './AudioPlayer.css';
 import hendphn from "./headph.png";
 
-// --- Icon Components ---
 const PlayIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>;
 const PauseIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>;
 const RewindIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11 18V6l-8.5 6 8.5 6zm-2-6 8.5 6V6l-8.5 6z"/></svg>;
 const ForwardIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="m4 18 8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/></svg>;
 const DownloadIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>;
 
-// --- Helper Function ---
 const formatTime = (time) => {
   if (isNaN(time) || time < 0) return '0:00';
   const minutes = Math.floor(time / 60);
@@ -17,7 +15,6 @@ const formatTime = (time) => {
   return `${minutes}:${String(seconds).padStart(2, '0')}`;
 };
 
-// --- Main AudioPlayer Component ---
 function AudioPlayer({ src, audioRef, isPlaying, onPlay, onPause, disabled = false }) {
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
