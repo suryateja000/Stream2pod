@@ -1,0 +1,115 @@
+/* --- src/LoadingSteps.css --- */
+.loader-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loader-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 3rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.loader-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.step-name {
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.4s ease-in-out;
+}
+
+.icon-wrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.step-item.pending .step-name {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.icon-wrapper.pending .pending-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.step-item.in-progress .step-name {
+  color: var(--primary-accent);
+}
+
+.icon-wrapper.in-progress {
+  background-color: rgba(0, 122, 255, 0.15);
+}
+
+.icon-wrapper.in-progress .pulsing-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--primary-accent);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+}
+
+.step-item.complete .step-name {
+  color: #34C759;
+}
+
+.icon-wrapper.complete {
+  background-color: #34C759;
+  box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+}
+
+.icon-wrapper.complete svg { 
+  stroke: white; 
+  stroke-width: 2.5; 
+}

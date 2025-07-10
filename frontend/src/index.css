@@ -1,0 +1,186 @@
+/* src/Podcast.css */
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --bg-gradient: linear-gradient(120deg, #161b22, #0d1117);
+  --glass-bg: rgba(35, 40, 57, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --text-primary: #e6edf3;
+  --text-secondary: #7d8590;
+  --primary-accent: #58a6ff;
+  --danger-accent: #f85149;
+  --button-gradient: linear-gradient(45deg, #3398e9, #833cde);
+  --button-hover-shadow: 0 5px 20px rgba(93, 63, 211, 0.4);
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.podcast-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--bg-gradient);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.title .red { color: var(--danger-accent); }
+.title .blue { color: var(--primary-accent); }
+
+.form, .player-container, .ask-section, .result-container, .summary-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+.result-container {
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.summary-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.summary-card a {
+    color: var(--primary-accent);
+    font-weight: 600;
+    margin-left: 0.5rem;
+    word-break: break-all;
+}
+.summary-card button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    flex-shrink: 0;
+}
+.summary-card button:hover {
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: white;
+    box-shadow: none;
+}
+
+
+.form label, .player-container h5, .ask-section label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="text"] {
+  background-color: rgba(13, 17, 23, 0.7);
+  border: 1px solid var(--glass-border);
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--button-hover-shadow);
+}
+button:disabled {
+  cursor: not-allowed;
+  background: var(--text-secondary) !important;
+  transform: none;
+  box-shadow: none;
+}
+
+.form button { background: var(--button-gradient); }
+
+.loader-container {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.player-container {
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.waveform {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60px;
+  gap: 8px;
+  width: 100%;
+}
+.bar {
+  width: 15px;
+  height: 10px;
+  background: linear-gradient(to top, #3398e9, #833cde);
+  border-radius: 4px;
+  transition: height 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ask-section { margin-top: 0; }
+.ask-group { display: flex; gap: 1rem; }
+.ask-group input { flex: 1; }
+.ask-group button { background-color: var(--danger-accent); }
+.ask-group button:hover { box-shadow: 0 5px 20px rgba(248, 81, 73, 0.4); }
+
+.ask-section.highlight {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .podcast-container { padding: 1rem; gap: 1rem; }
+  .title { font-size: 2rem; }
+  .form, .player-container, .ask-section, .result-container { padding: 1rem; }
+  .ask-group { flex-direction: column; }
+  .summary-card { flex-direction: column; text-align: center; }
+}
