@@ -30,11 +30,7 @@ async def read_root():
     
     return {"message": "Hello World from mohith surya raghav"}
 
-
 connected_clients = {}
-
-
-
 
 # @app.post("/prompt")
 # async def agent_run(prompt:Prompt):
