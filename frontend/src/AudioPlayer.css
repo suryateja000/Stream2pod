@@ -1,6 +1,6 @@
 :root {
   --primary-bg: #ffffff;
-  --glow-color: #4483ff; /* Example color, was var(--danger-accent) */
+  --glow-color: #4483ff; 
   --text-primary: #111111;
   --text-secondary: #555555;
   --progress-bar-bg: rgba(0, 0, 0, 0.1);
@@ -165,7 +165,7 @@
     right: 25px;
 }
 
-/* --- NEW DISABLED STYLES --- */
+
 .audio-player.disabled {
     opacity: 0.8;
 }
@@ -178,5 +178,5 @@
 
 .control-btn:disabled:hover,
 .icon-btn:disabled:hover {
-    color: var(--text-secondary); /* Prevents hover color change when disabled */
+    color: var(--text-secondary); 
 }
