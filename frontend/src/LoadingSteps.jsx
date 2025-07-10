@@ -12,7 +12,7 @@ const StepIcon = ({ status }) => {
   if (status === 'in-progress') {
     return <div className="pulsing-dot" />;
   }
-  // For 'pending' status
+
   return <div className="pending-dot" />;
 };
 
