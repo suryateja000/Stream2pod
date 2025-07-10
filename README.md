@@ -32,6 +32,9 @@
    - Podcast resumes after the answer
 
 ---
+## Usage
+1. Clone the repository  
+2. Run `run.bat`  
 
 ## 🛠️ Tech Stack
 
