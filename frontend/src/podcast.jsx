@@ -4,7 +4,6 @@ import './podcast.css';
 import LoadingSteps from './LoadingSteps.jsx';
 import AudioPlayer from './AudioPlayer.jsx';
 
-// --- Icon Components for UI ---
 const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>;
 const YouTubeIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.267,4,12,4,12,4S5.733,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.733,2,12,2,12s0,4.267,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.733,20,12,20,12,20s6.267,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.267,22,12,22,12S22,7.733,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>;
 
@@ -104,7 +103,6 @@ function Podcast() {
         }
     };
     
-    // This effect handles cleanup for the answer audio
     useEffect(() => {
         return () => {
             if (answerAudio) {
