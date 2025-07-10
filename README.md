@@ -1,6 +1,6 @@
 # 🎧 Stream2Podcast
 
-**Stream2Podcast** is an intelligent podcast-generation platform that converts YouTube videos into audio-based podcast episodes — and enhances the experience with a built-in **AI Assistant** that answers user questions mid-playback as spoken responses, then resumes the original podcast seamlessly.
+**Stream2Podcast** turns YouTube videos into podcast episodes with an AI Assistant that answers your questions mid-playback and resumes the audio seamlessly. It also updates outdated information from the original video using the latest data, so you always hear the most accurate and up-to-date content.
 
 ---
 
@@ -16,6 +16,7 @@
 - 📝 Automatic transcription using `youtube-transcript-api`
 - 🔊 Voice synthesis with Microsoft Edge TTS for a natural response
 - 💡 Fast and responsive frontend using React + Vite
+-  youtube video -> transceipt  -> up to date podcast
 
 ---
 
