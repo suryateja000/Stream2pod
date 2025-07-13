@@ -19,6 +19,9 @@
 -  youtube video -> transceipt  -> up to date podcast
 
 ---
+## Usage
+1. Clone the repository
+3. Run `run.bat`
 
 ## 🧠 How It Works
 
@@ -32,9 +35,7 @@
    - Podcast resumes after the answer
 
 ---
-## Usage
-1. Clone the repository  
-2. Run `run.bat`  
+
 
 ## 🛠️ Tech Stack
 
