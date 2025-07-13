@@ -144,7 +144,7 @@ async def getScript(url):
 
     prompt = f"Use the script tool to get a podcast script from this transcript: {transcript_input}. Return ONLY the raw script output from the tool, nothing else."
 
-    response = script.invoke({"transcript_text": transcript_input})
+    response = agent.invoke({"transcript_text": transcript_input})
     print("\n--- Initial Podcast Created ---")
     print(response)
     return response 
