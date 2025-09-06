@@ -2,7 +2,7 @@
 
 **Stream2Podcast** turns YouTube videos into podcast episodes with an AI Assistant that answers your questions mid-playback and resumes the audio seamlessly. It also updates outdated information from the original video using the latest data, so you always hear the most accurate and up-to-date content.
 
-**Demo video** : https://drive.google.com/file/d/1r7ZH5Vk3UalnW5tWZ306GayPluB6PFZL/view?usp=sharing](https://drive.google.com/file/d/1KTOGBhXtBl7g3h2ui8NXUdLS3pFvTOTz/view?usp=sharing)
+**Demo video** :https://drive.google.com/file/d/1KTOGBhXtBl7g3h2ui8NXUdLS3pFvTOTz/view?usp=sharing
 ---
 
 ## 🚀 Features
